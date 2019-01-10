@@ -16,11 +16,11 @@ public class Xbox_Stick_Left : MonoBehaviour
         float StickLHoriz = Input.GetAxis("Horizontal");
         float StickLVert = Input.GetAxis("Vertical");
 
-        stickLFaceTrans.SetPositionAndRotation(stickLFaceTrans.position, new Quaternion(0f, 0f, 0f, 1f));
-        stickLTopTrans.SetPositionAndRotation(stickLTopTrans.position, new Quaternion(0f, 0f, 0f, 1f));
+        stickLFaceTrans.localRotation = Quaternion.Euler(0, 0, 0);
+        stickLTopTrans.localRotation = Quaternion.Euler(0, 0, 0);
 
-        stickLFaceTrans.Rotate(StickLVert * 24f + 12f, StickLHoriz * 24f + 12f, 0.0f);
-        stickLTopTrans.Rotate(StickLVert * 24f + 12f, StickLHoriz * 24f + 12f, 0.0f);
+        stickLFaceTrans.Rotate(StickLVert * 24f, StickLHoriz * 24f, 0.0f);
+        stickLTopTrans.Rotate(StickLVert * 24f, StickLHoriz * 24f, 0.0f);
 
         Debug.Log("StickLHoriz: " + StickLHoriz * 24f);
         Debug.Log("StickLVert: " + StickLVert * 24f);
