@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class Xbox_Stick_Left : MonoBehaviour
 {
-    private Transform stickLFaceTrans;
-    private Transform stickLTopTrans;
+    public Transform stickLFaceTrans;
+    public Transform stickLTopTrans;
 
     void Start()
     {
-        stickLFaceTrans = GameObject.Find("XboxOne_Controller_Face/Stick_L").GetComponent<Transform>();
-        stickLTopTrans = GameObject.Find("XboxOne_Controller_Top/Stick_L").GetComponent<Transform>();
+        Debug.Log("Start script");
     }
     void Update()
     {
         float StickLHoriz = Input.GetAxis("Horizontal");
         float StickLVert = Input.GetAxis("Vertical");
 
-        stickLFaceTrans.rotation.Set(StickLVert * 24f + 12f, StickLHoriz * 24f + 12f, 0.0f, 1f);
-        stickLTopTrans.rotation.Set(StickLVert * 24f + 12f, StickLHoriz * 24f + 12f, 0.0f, 1f);
+        stickLFaceTrans.Rotate(StickLVert * 24f + 12f, StickLHoriz * 24f + 12f, 0.0f);
+        stickLTopTrans.Rotate(StickLVert * 24f + 12f, StickLHoriz * 24f + 12f, 0.0f);
+
+        Debug.Log("StickLHoriz: " + StickLHoriz * 24f);
+        Debug.Log("StickLVert: " + StickLVert * 24f);
     }
 }
