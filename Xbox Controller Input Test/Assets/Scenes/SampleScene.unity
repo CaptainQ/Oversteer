@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &142717895 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400026, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 457576084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &165443053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400034, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
@@ -246,6 +252,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400026, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
 --- !u!4 &480773674 stripped
@@ -363,6 +377,12 @@ MonoBehaviour:
   triggerLTopTrans: {fileID: 1302497227}
   triggerRFaceTrans: {fileID: 480773674}
   triggerRTopTrans: {fileID: 1406543264}
+  DPadFaceTrans: {fileID: 1393099690}
+  DPadTopTrans: {fileID: 1341108630}
+  bumperLFaceTrans: {fileID: 1177791116}
+  bumperLTopTrans: {fileID: 142717895}
+  bumperRFaceTrans: {fileID: 829040577}
+  bumperRTopTrans: {fileID: 1746364602}
 --- !u!4 &615737939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400030, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
@@ -375,9 +395,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 457576084}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &829040577 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400028, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388870161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1177791116 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400026, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388870161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1302497227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400034, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 457576084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1341108630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400010, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
     type: 3}
   m_PrefabInstance: {fileID: 457576084}
   m_PrefabAsset: {fileID: 0}
@@ -472,11 +510,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400026, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
+--- !u!4 &1393099690 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400010, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388870161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1406543264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400036, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 457576084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1746364602 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400028, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
     type: 3}
   m_PrefabInstance: {fileID: 457576084}
   m_PrefabAsset: {fileID: 0}
