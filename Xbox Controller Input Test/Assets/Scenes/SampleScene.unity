@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &165443053 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400034, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388870161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +248,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
+--- !u!4 &480773674 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400036, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388870161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &509994954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400032, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1388870161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +357,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stickLFaceTrans: {fileID: 615737939}
   stickLTopTrans: {fileID: 624527524}
+  stickRFaceTrans: {fileID: 509994954}
+  stickRTopTrans: {fileID: 1856612827}
+  triggerLFaceTrans: {fileID: 165443053}
+  triggerLTopTrans: {fileID: 1302497227}
+  triggerRFaceTrans: {fileID: 480773674}
+  triggerRTopTrans: {fileID: 1406543264}
 --- !u!4 &615737939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400030, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
@@ -348,6 +372,12 @@ Transform:
 --- !u!4 &624527524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400030, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 457576084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1302497227 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400034, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
     type: 3}
   m_PrefabInstance: {fileID: 457576084}
   m_PrefabAsset: {fileID: 0}
@@ -444,3 +474,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b, type: 3}
+--- !u!4 &1406543264 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400036, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 457576084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1856612827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400032, guid: ba02518e1c5beeb4e9a3a7be5b4a4d1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 457576084}
+  m_PrefabAsset: {fileID: 0}
