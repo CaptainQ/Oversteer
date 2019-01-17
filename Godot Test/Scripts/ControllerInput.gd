@@ -4,7 +4,7 @@ extends Node
 # var a = 2
 # var b = "textvar"
 
-var deadZone = 0.1
+var deadZone = 0
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -28,6 +28,18 @@ func _process(delta):
 		var xAxis = Input.get_joy_axis(0,JOY_AXIS_0)
 		if abs(xAxis) > deadZone:
 			if xAxis < 0:
-				get_node("Controller Face/Body/Stick L").rotation.z = xAxis * 23
-				get_node("Controller Top/Body/Stick L").rotation.z = xAxis * 23
+				get_node("Controller Face/Body/Stick L").rotation.z = -xAxis / 2
+				get_node("Controller Top/Body/Stick L").rotation.z = -xAxis / 2
+			if xAxis > 0:
+				get_node("Controller Face/Body/Stick L").rotation.z = -xAxis / 2
+				get_node("Controller Top/Body/Stick L").rotation.z = -xAxis / 2
+			
+		var yAxis = Input.get_joy_axis(0,JOY_AXIS_1)
+		if abs(yAxis) > deadZone:
+			if yAxis < 0:
+				get_node("Controller Face/Body/Stick L").rotation.x = yAxis / 2
+				get_node("Controller Top/Body/Stick L").rotation.x = yAxis / 2
+			if yAxis > 0:
+				get_node("Controller Face/Body/Stick L").rotation.x = yAxis / 2
+				get_node("Controller Top/Body/Stick L").rotation.x = yAxis / 2
 

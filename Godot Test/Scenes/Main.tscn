@@ -437,6 +437,7 @@ _sections_unfolded = [ "material" ]
 
 [node name="Stick L" parent="Controller Face/Body" index="13"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.846608, 0, -0.112145 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="X Button" parent="Controller Face/Body" index="17"]
