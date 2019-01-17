@@ -428,16 +428,32 @@ _sections_unfolded = [ "material" ]
 [node name="A Button" parent="Controller Face/Body" index="0"]
 
 material/0 = SubResource( 4 )
-_sections_unfolded = [ "material" ]
+_sections_unfolded = [ "Transform", "material" ]
 
 [node name="B Button" parent="Controller Face/Body" index="1"]
 
 material/0 = SubResource( 5 )
 _sections_unfolded = [ "material" ]
 
+[node name="Menu L" parent="Controller Face/Body" index="8"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Menu R" parent="Controller Face/Body" index="9"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Shoulder L" parent="Controller Face/Body" index="11"]
+
+_sections_unfolded = [ "Transform" ]
+
 [node name="Stick L" parent="Controller Face/Body" index="13"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.846608, 0, -0.112145 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Stick R" parent="Controller Face/Body" index="14"]
+
 _sections_unfolded = [ "Transform" ]
 
 [node name="X Button" parent="Controller Face/Body" index="17"]
