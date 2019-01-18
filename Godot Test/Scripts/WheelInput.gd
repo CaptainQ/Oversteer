@@ -25,6 +25,10 @@ var stickLOld = Vector2(0, 0)
 var stickROld = Vector2(0, 0)
 
 var stickThresh = .9
+var stickLLength = 0
+var stickRLength = 0
+var stickLOldLength = 0
+var stickROldLength = 0
 	
 var changeInStickL = 0 #radian
 var changeInStickR = 0 #radian
@@ -62,23 +66,35 @@ func _process(delta):
 		stickL = Vector2(xAxisL, yAxisL)
 		stickR = Vector2(xAxisR, yAxisR)
 		
-		if abs(stickL.x) < stickThresh and abs(stickL.y) < stickThresh:
+		stickLOldLength = stickLLength
+		stickROldLength = stickRLength
+		
+		stickLLength = sqrt(pow(abs(xAxisL), 2) + pow(abs(yAxisL), 2))
+		stickRLength = sqrt(pow(abs(xAxisR), 2) + pow(abs(yAxisR), 2))
+		
+		if stickLLength < stickThresh:
 			stickL = Vector2(0, 0)
 		
-		if abs(stickR.x) < stickThresh and abs(stickR.y) < stickThresh:
+		if stickRLength < stickThresh:
 			stickR = Vector2(0, 0)
 		
-		if (abs(stickLOld.x) < stickThresh and abs(stickLOld.y) < stickThresh) or (abs(stickL.x) < stickThresh and abs(stickL.y) < stickThresh):
+		if (stickLOldLength > stickThresh) and (stickLLength > stickThresh):
 			changeInStickL = stickL.angle_to(stickLOld)
 		else:
 			changeInStickL = 0
+		get_node("../Main/CanvasLayer/Label Change in L").set_text(" Change in L: " + str(changeInStickL))
 		
-		if (abs(stickROld.x) < stickThresh and abs(stickROld.y) < stickThresh) or (abs(stickR.x) < stickThresh and abs(stickR.y) < stickThresh):
+		if (stickROldLength > stickThresh) and (stickRLength > stickThresh):
 			changeInStickR = stickR.angle_to(stickROld)
 		else:
 			changeInStickR = 0
+		get_node("../Main/CanvasLayer/Label Change in R").set_text(" Change in R: " + str(changeInStickR))
 		
-		averageChange = (changeInStickL + changeInStickR) / 2
+		if changeInStickL > 0 and changeInStickR > 0:
+			averageChange = (changeInStickL + changeInStickR) / 2
+		else:
+			averageChange = (changeInStickL + changeInStickR)
+		get_node("../Main/CanvasLayer/Label Average Change").set_text(" Average Change: " + str(averageChange))
 		
 		steeringWheelContainer += averageChange
 		if abs(steeringWheelContainer) > maxSteeringRotation:
