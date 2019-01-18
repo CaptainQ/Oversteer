@@ -90,13 +90,17 @@ func _process(delta):
 			changeInStickR = 0
 		get_node("../Main/CanvasLayer/Label Change in R").set_text(" Change in R: " + str(changeInStickR))
 		
-		if changeInStickL > 0 and changeInStickR > 0:
-			averageChange = (changeInStickL + changeInStickR) / 2
+		if (stickLLength < stickThresh) or (stickRLength < stickThresh):
+			averageChange = changeInStickL + changeInStickR
 		else:
-			averageChange = (changeInStickL + changeInStickR)
+			averageChange = (changeInStickL + changeInStickR) / 2
 		get_node("../Main/CanvasLayer/Label Average Change").set_text(" Average Change: " + str(averageChange))
 		
-		steeringWheelContainer += averageChange
+		if (stickLLength < stickThresh) and (stickRLength < stickThresh):
+			steeringWheelContainer -= (steeringWheelContainer * .03)
+		else:
+			steeringWheelContainer += averageChange
+		
 		if abs(steeringWheelContainer) > maxSteeringRotation:
 			steeringWheelContainer = maxSteeringRotation * (abs(steeringWheelContainer) / steeringWheelContainer)
 		
